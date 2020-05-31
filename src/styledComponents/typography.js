@@ -12,6 +12,10 @@ export const Heading2 = styled.h2`
   text-transform: capitalize;
 `;
 
+export const Text = styled.p`
+  font-size: 14px;
+`;
+
 export const Link = styled(PageLink)`
   font-size: 14px;
   color: #ff7a92;

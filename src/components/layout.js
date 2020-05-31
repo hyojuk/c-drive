@@ -8,8 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from 'styled-components';
-
+import styled from "styled-components";
+import { Container } from "../styledComponents/components";
 import Header from "./header"
 import "./layout.css"
 
@@ -25,10 +25,10 @@ const Layout = ({ children }) => {
     }
   `);
 
-  const Container = styled.div`
-    margin: 0 auto;
-    maxWidth: 960;
-    padding: 0 1.0875rem 1.45rem;
+  const Footer = styled.footer`
+    padding-left: 20px;
+    display: flex;
+    align-items: flex-end;
   `;
 
   return (
@@ -36,10 +36,10 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <Container>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, built by {data.site.siteMetadata.author}
-        </footer>
       </Container>
+      <Footer>
+        © {new Date().getFullYear()}, built by {data.site.siteMetadata.author}
+      </Footer>
     </>
   )
 }
