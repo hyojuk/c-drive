@@ -48,7 +48,7 @@ export const Nav = styled.ul`
     align-items: stretch;
     float: left;
     list-style-type: none;
-    padding: 30px 40px 20px 40px;
+    padding: 20px 40px 10px 40px;
     margin: 20px 20px 0px 0px;
     border: solid;
     border-radius: 5px;
