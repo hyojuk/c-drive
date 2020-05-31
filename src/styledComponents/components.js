@@ -8,7 +8,8 @@ export const Button = styled.button`
   text-transform: uppercase;
   border: none;
   border-radius: 5px;
-  font-family: sans-serif;
+  font-size: 18px,
+  font-family: 'Inconsolata', monospace;
   filter: hue-rotate(0deg);
   transition: filter 300ms linear;
   cursor: pointer;

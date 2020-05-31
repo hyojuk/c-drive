@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Claire\'s C:Drive`,
+    title: `C:\\claire`,
     description: `Everything Claire`,
     author: `claire kim`,
   },
