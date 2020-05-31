@@ -20,7 +20,7 @@ export const Button = styled.button`
     align-self: flex-start;
     margin-bottom: 10px;
     padding: 5px 25px;
-    background: ${props => props.theme.color.hotpink};
+    background: ${props => props.theme.color.pink};
     color: white;
     font-weight: 300;
     text-transform: uppercase;

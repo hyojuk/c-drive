@@ -21,8 +21,8 @@ const IndexPage = () => (
       <Text>This is a styled text component.</Text>
       <Button>Button</Button>
       <Alert>Alert! Error! An error has occurred. Something went very wrong. </Alert>
-      <Link to="/page-2/">Link to page 2</Link> 
-      <Link to="/using-typescript/">Link to "Using TypeScript"</Link>
+      <Link to="/page-2">Link to page 2</Link> 
+      <Link to="/using-typescript">Link to "Using TypeScript"</Link>
       <Modal>                    
         <h5>Modal Title </h5>
         <Text>

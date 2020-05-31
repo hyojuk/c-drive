@@ -15,6 +15,12 @@ import Header from "./header"
 import theme from '../assets/theme';
 import "./layout.css"
 
+const Footer = styled.footer`
+padding-left: 20px;
+display: flex;
+align-items: flex-end;
+`;
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -27,12 +33,6 @@ const Layout = ({ children }) => {
     }
   `);
 
-  const Footer = styled.footer`
-    padding-left: 20px;
-    display: flex;
-    align-items: flex-end;
-  `;
-
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
       <Nav>
         <NavItem><Link to="/">Home</Link></NavItem>
         <NavItem><Link to="/page-2">Nav 2</Link></NavItem>
-        <NavItem><Link to="using-typescript">Nav 3</Link></NavItem>
+        <NavItem><Link to="/using-typescript">Nav 3</Link></NavItem>
       </Nav>
       <Container>
         <main>{children}</main>

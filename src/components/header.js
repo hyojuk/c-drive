@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { Heading1 } from "../styledComponents/typography";
 
 const HeaderContainer = styled.header`
-  background: ${props => props.theme.color.pink};
+  background: ${props => props.theme.color.lightpink};
   marginBottom: 1.45rem;
 `;
 
