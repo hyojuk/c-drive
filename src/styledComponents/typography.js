@@ -10,6 +10,7 @@ export const Heading1 = styled.h1`
 
 export const Heading2 = styled.h2`
   text-transform: capitalize;
+  font-weight: 400;
 `;
 
 export const Text = styled.p`
@@ -18,7 +19,7 @@ export const Text = styled.p`
 
 export const Link = styled(PageLink)`
   font-size: 14px;
-  color: #ff7a92;
+  color: ${props => props.theme.color.hotpink};
   text-decoration: none;
   &:focus,
   &:hover {

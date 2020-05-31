@@ -5,12 +5,14 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components";
-import { Container } from "../styledComponents/components";
+import styled, { ThemeProvider } from "styled-components";
+import { Container, Nav, NavItem } from "../styledComponents/components";
+import { Link } from "../styledComponents/typography";
 import Header from "./header"
+import theme from '../assets/theme';
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -33,13 +35,22 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <ThemeProvider theme={theme}>
+      <Fragment>
       <Header siteTitle={data.site.siteMetadata.title} />
+      <Nav>
+        <NavItem><Link to="/">Home</Link></NavItem>
+        <NavItem><Link to="/page-2">Nav 2</Link></NavItem>
+        <NavItem><Link to="using-typescript">Nav 3</Link></NavItem>
+      </Nav>
       <Container>
         <main>{children}</main>
       </Container>
       <Footer>
         © {new Date().getFullYear()}, built by {data.site.siteMetadata.author}
       </Footer>
+      </Fragment>
+      </ThemeProvider>
     </>
   )
 }
@@ -48,4 +59,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default Layout;

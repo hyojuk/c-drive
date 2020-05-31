@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const Alert = styled.div`
     padding: 7px 20px 7px;
-    color: #fe6b4a;
+    color: ${props => props.theme.color.red};
     margin-top: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
-    border-color: #fe6b4a;
+    border-color: ${props => props.theme.color.red};
     border-style: solid;
     border-width: 1px;
     font-size: 13px;
@@ -18,8 +18,9 @@ export const Alert = styled.div`
 
 export const Button = styled.button`
     align-self: flex-start;
+    margin-bottom: 10px;
     padding: 5px 25px;
-    background: rgb(255,189,201);
+    background: ${props => props.theme.color.hotpink};
     color: white;
     font-weight: 300;
     text-transform: uppercase;
@@ -42,6 +43,14 @@ export const Container = styled.div`
     padding: 15px 15px 20px;
 `;
 
+export const Image = styled.img`
+    display: block; 
+    border-radius: 4px;
+    opacity: 0.8;
+    width: 150px;
+    margin-right: 7px;
+`;
+
 export const Nav = styled.ul`
     display: flex;
     flex-direction: column;
@@ -49,11 +58,11 @@ export const Nav = styled.ul`
     float: left;
     list-style-type: none;
     padding: 20px 40px 10px 40px;
-    margin: 20px 20px 0px 0px;
+    margin: 20px 0px 0px 20px;
     border: solid;
     border-radius: 5px;
     border-width: 1.2px;
-    border-color: #bebdbd;
+    border-color: ${props => props.theme.color.grey};
     @media (max-width: 768px) {
         flex-direction: row;
         float: none;
@@ -63,6 +72,10 @@ export const Nav = styled.ul`
     }
 `;
 
-export const NavItem = styled.li`
+export const NavItem = styled.li``;
 
+export const RowContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
 `;
